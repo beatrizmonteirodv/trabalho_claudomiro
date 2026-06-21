@@ -1,70 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L9,3 L0,6 Z" fill="#111"/>
-    </marker>
-    <style>
-      text { font-family: Arial, sans-serif; fill: #111; }
-      .title { font-size: 28px; font-weight: bold; }
-      .label { font-size: 18px; font-weight: bold; }
-      .small { font-size: 15px; }
-      .box { fill: #fff; stroke: #111; stroke-width: 2; }
-      .bank { fill: #f5f5f5; stroke: #111; stroke-width: 2; }
-      .chip { fill: #fff; stroke: #111; stroke-width: 2; }
-      .line { fill: none; stroke: #111; stroke-width: 2; marker-end: url(#arrow); }
-      .bus { fill: none; stroke: #111; stroke-width: 4; }
-    </style>
-  </defs>
-
-  <rect width="1100" height="700" fill="white"/>
-  <text x="550" y="38" text-anchor="middle" class="title">Projeto 1 - memoria de 8 Gbits</text>
-
-  <rect x="55" y="75" width="430" height="70" class="box"/>
-  <line x1="365" y1="75" x2="365" y2="145" stroke="#111" stroke-width="2"/>
-  <text x="210" y="103" text-anchor="middle" class="label">26 bits internos</text>
-  <text x="210" y="128" text-anchor="middle" class="small">13 pinos: linha por RAS + coluna por CAS</text>
-  <text x="425" y="103" text-anchor="middle" class="label">1 bit</text>
-  <text x="425" y="128" text-anchor="middle" class="small">seleciona banco</text>
-  <text x="55" y="168" class="small">Barramento logico: 27 bits</text>
-
-  <rect x="55" y="255" width="150" height="80" class="box"/>
-  <text x="130" y="285" text-anchor="middle" class="label">Seletor</text>
-  <text x="130" y="312" text-anchor="middle" class="small">1 bit - 2 bancos</text>
-  <path d="M425 145 L425 220 L130 220 L130 255" class="line"/>
-
-  <path d="M210 145 L210 190 L1000 190" class="bus"/>
-  <text x="690" y="181" text-anchor="middle" class="small">enderecos internos compartilhados</text>
-
-  <rect x="255" y="215" width="690" height="170" rx="8" class="bank"/>
-  <text x="275" y="242" class="label">Banco 0 - 4 Gbits</text>
-  <rect x="290" y="265" width="135" height="85" class="chip"/>
-  <rect x="450" y="265" width="135" height="85" class="chip"/>
-  <rect x="610" y="265" width="135" height="85" class="chip"/>
-  <rect x="770" y="265" width="135" height="85" class="chip"/>
-  <text x="358" y="298" text-anchor="middle" class="label">64 M x 16</text><text x="358" y="325" text-anchor="middle" class="small">1 Gbit</text>
-  <text x="518" y="298" text-anchor="middle" class="label">64 M x 16</text><text x="518" y="325" text-anchor="middle" class="small">1 Gbit</text>
-  <text x="678" y="298" text-anchor="middle" class="label">64 M x 16</text><text x="678" y="325" text-anchor="middle" class="small">1 Gbit</text>
-  <text x="838" y="298" text-anchor="middle" class="label">64 M x 16</text><text x="838" y="325" text-anchor="middle" class="small">1 Gbit</text>
-  <path d="M205 280 L255 280" class="line"/>
-
-  <rect x="255" y="420" width="690" height="170" rx="8" class="bank"/>
-  <text x="275" y="447" class="label">Banco 1 - 4 Gbits</text>
-  <rect x="290" y="470" width="135" height="85" class="chip"/>
-  <rect x="450" y="470" width="135" height="85" class="chip"/>
-  <rect x="610" y="470" width="135" height="85" class="chip"/>
-  <rect x="770" y="470" width="135" height="85" class="chip"/>
-  <text x="358" y="503" text-anchor="middle" class="label">64 M x 16</text><text x="358" y="530" text-anchor="middle" class="small">1 Gbit</text>
-  <text x="518" y="503" text-anchor="middle" class="label">64 M x 16</text><text x="518" y="530" text-anchor="middle" class="small">1 Gbit</text>
-  <text x="678" y="503" text-anchor="middle" class="label">64 M x 16</text><text x="678" y="530" text-anchor="middle" class="small">1 Gbit</text>
-  <text x="838" y="503" text-anchor="middle" class="label">64 M x 16</text><text x="838" y="530" text-anchor="middle" class="small">1 Gbit</text>
-  <path d="M205 315 L230 315 L230 485 L255 485" class="line"/>
-
-  <path d="M945 300 L1000 300 L1000 505 L945 505" class="bus"/>
-  <path d="M1000 402 L1060 402" class="line"/>
-  <text x="1070" y="385" text-anchor="end" class="label">BD = 64 bits</text>
-  <text x="1070" y="425" text-anchor="end" class="small">2 palavras de 32 bits</text>
-
-  <text x="550" y="635" text-anchor="middle" class="label">2 bancos x 4 chips = 8 chips = 8 Gbits</text>
-  <text x="550" y="665" text-anchor="middle" class="small">Apenas o banco selecionado usa o barramento de dados.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="680" viewBox="0 0 780 680">
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6Z" fill="#111"/></marker><style>text{font-family:Arial,sans-serif;fill:#111}.p{font-size:17px}.c{font-size:21px;text-anchor:middle}.s{font-size:16px;text-anchor:middle}.l{stroke:#111;stroke-width:2;marker-end:url(#a)}.b{stroke:#111;stroke-width:2;marker-start:url(#a);marker-end:url(#a)}</style></defs>
+  <rect width="780" height="680" fill="#fff"/><rect x="285" y="30" width="240" height="555" fill="#fff" stroke="#111" stroke-width="2"/>
+  <g class="p">
+    <text x="190" y="60">A0</text><line x1="225" y1="55" x2="285" y2="55" class="l"/><text x="190" y="82">A1</text><line x1="225" y1="77" x2="285" y2="77" class="l"/>
+    <text x="190" y="104">A2</text><line x1="225" y1="99" x2="285" y2="99" class="l"/><text x="190" y="126">A3</text><line x1="225" y1="121" x2="285" y2="121" class="l"/>
+    <text x="190" y="148">A4</text><line x1="225" y1="143" x2="285" y2="143" class="l"/><text x="190" y="170">A5</text><line x1="225" y1="165" x2="285" y2="165" class="l"/>
+    <text x="190" y="192">A6</text><line x1="225" y1="187" x2="285" y2="187" class="l"/><text x="190" y="214">A7</text><line x1="225" y1="209" x2="285" y2="209" class="l"/>
+    <text x="190" y="236">A8</text><line x1="225" y1="231" x2="285" y2="231" class="l"/><text x="190" y="258">A9</text><line x1="225" y1="253" x2="285" y2="253" class="l"/>
+    <text x="180" y="280">A10</text><line x1="225" y1="275" x2="285" y2="275" class="l"/><text x="180" y="302">A11</text><line x1="225" y1="297" x2="285" y2="297" class="l"/>
+    <text x="180" y="324">A12</text><line x1="225" y1="319" x2="285" y2="319" class="l"/>
+    <text x="160" y="390">/RAS</text><line x1="225" y1="385" x2="285" y2="385" class="l"/><text x="160" y="425">/CAS</text><line x1="225" y1="420" x2="285" y2="420" class="l"/>
+    <text x="155" y="495">Banco</text><line x1="225" y1="490" x2="285" y2="490" class="l"/>
+  </g>
+  <text x="405" y="175" class="c">Sistema de memoria</text><text x="405" y="210" class="c">8 Gbits</text>
+  <text x="405" y="260" class="s">2 bancos</text><text x="405" y="292" class="s">4 chips 64 M x 16</text><text x="405" y="318" class="s">por banco</text><text x="405" y="360" class="s">8 chips no total</text>
+  <line x1="525" y1="185" x2="610" y2="185" class="b"/><text x="630" y="191" class="p">D0</text><line x1="525" y1="220" x2="610" y2="220" class="b"/><text x="630" y="226" class="p">D1</text>
+  <text x="565" y="260" class="p">...</text><line x1="525" y1="300" x2="610" y2="300" class="b"/><text x="630" y="306" class="p">D62</text><line x1="525" y1="335" x2="610" y2="335" class="b"/><text x="630" y="341" class="p">D63</text>
+  <line x1="345" y1="635" x2="345" y2="585" class="l"/><text x="345" y="662" text-anchor="middle" class="p">/CS</text><line x1="405" y1="635" x2="405" y2="585" class="l"/><text x="405" y="662" text-anchor="middle" class="p">/WE</text><line x1="465" y1="635" x2="465" y2="585" class="l"/><text x="465" y="662" text-anchor="middle" class="p">/OE</text>
 </svg>
 
