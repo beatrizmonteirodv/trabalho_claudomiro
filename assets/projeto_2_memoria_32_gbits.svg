@@ -1,62 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="690" viewBox="0 0 1050 690">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L9,3 L0,6 Z" fill="#111"/>
-    </marker>
-    <style>
-      text { font-family: Arial, sans-serif; fill: #111; }
-      .title { font-size: 28px; font-weight: bold; }
-      .label { font-size: 18px; font-weight: bold; }
-      .small { font-size: 15px; }
-      .box { fill: #fff; stroke: #111; stroke-width: 2; }
-      .chip { fill: #f7f7f7; stroke: #111; stroke-width: 2; }
-      .line { fill: none; stroke: #111; stroke-width: 2; marker-end: url(#arrow); }
-      .bus { fill: none; stroke: #111; stroke-width: 4; }
-    </style>
-  </defs>
-
-  <rect width="1050" height="690" fill="white"/>
-  <text x="525" y="38" text-anchor="middle" class="title">Projeto 2 - memoria de 32 Gbits</text>
-
-  <rect x="50" y="75" width="470" height="70" class="box"/>
-  <line x1="365" y1="75" x2="365" y2="145" stroke="#111" stroke-width="2"/>
-  <text x="205" y="103" text-anchor="middle" class="label">26 bits internos</text>
-  <text x="205" y="128" text-anchor="middle" class="small">13 pinos multiplexados por RAS/CAS</text>
-  <text x="442" y="103" text-anchor="middle" class="label">5 bits</text>
-  <text x="442" y="128" text-anchor="middle" class="small">selecao de banco</text>
-  <text x="50" y="168" class="small">Barramento logico: 31 bits</text>
-
-  <rect x="55" y="250" width="170" height="90" class="box"/>
-  <text x="140" y="280" text-anchor="middle" class="label">Decodificador</text>
-  <text x="140" y="307" text-anchor="middle" class="small">5 bits - 32 bancos</text>
-  <path d="M442 145 L442 205 L140 205 L140 250" class="line"/>
-
-  <path d="M205 145 L205 190 L920 190" class="bus"/>
-  <text x="650" y="180" text-anchor="middle" class="small">A0-A12 compartilhados por todos os bancos</text>
-
-  <rect x="300" y="235" width="175" height="105" class="chip"/>
-  <rect x="520" y="235" width="175" height="105" class="chip"/>
-  <rect x="740" y="235" width="175" height="105" class="chip"/>
-  <text x="388" y="263" text-anchor="middle" class="label">Banco 0</text><text x="388" y="292" text-anchor="middle" class="label">64 M x 16</text><text x="388" y="320" text-anchor="middle" class="small">1 chip = 1 Gbit</text>
-  <text x="608" y="263" text-anchor="middle" class="label">Banco 1</text><text x="608" y="292" text-anchor="middle" class="label">64 M x 16</text><text x="608" y="320" text-anchor="middle" class="small">1 chip = 1 Gbit</text>
-  <text x="828" y="263" text-anchor="middle" class="label">Banco 2</text><text x="828" y="292" text-anchor="middle" class="label">64 M x 16</text><text x="828" y="320" text-anchor="middle" class="small">1 chip = 1 Gbit</text>
-
-  <text x="608" y="395" text-anchor="middle" style="font: bold 32px Arial">. . .</text>
-
-  <rect x="520" y="435" width="175" height="105" class="chip"/>
-  <text x="608" y="463" text-anchor="middle" class="label">Banco 31</text><text x="608" y="492" text-anchor="middle" class="label">64 M x 16</text><text x="608" y="520" text-anchor="middle" class="small">1 chip = 1 Gbit</text>
-
-  <path d="M225 270 L300 270" class="line"/>
-  <path d="M225 285 L500 285 L500 270 L520 270" class="line"/>
-  <path d="M225 300 L720 300 L720 270 L740 270" class="line"/>
-  <path d="M225 320 L480 320 L480 475 L520 475" class="line"/>
-
-  <path d="M475 330 L960 330 L960 490 L695 490" class="bus"/>
-  <path d="M960 410 L1015 410" class="line"/>
-  <text x="1015" y="390" text-anchor="end" class="label">BD = 16 bits</text>
-  <text x="1015" y="438" text-anchor="end" class="small">somente 1 banco ativo</text>
-
-  <text x="525" y="605" text-anchor="middle" class="label">32 bancos x 1 chip = 32 chips = 32 Gbits</text>
-  <text x="525" y="635" text-anchor="middle" class="small">Cada banco guarda 1 Gbit e entrega 16 bits por acesso.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="720" viewBox="0 0 800 720">
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6Z" fill="#111"/></marker><style>text{font-family:Arial,sans-serif;fill:#111}.p{font-size:17px}.c{font-size:21px;text-anchor:middle}.s{font-size:16px;text-anchor:middle}.l{stroke:#111;stroke-width:2;marker-end:url(#a)}.b{stroke:#111;stroke-width:2;marker-start:url(#a);marker-end:url(#a)}</style></defs>
+  <rect width="800" height="720" fill="#fff"/><rect x="300" y="25" width="240" height="600" fill="#fff" stroke="#111" stroke-width="2"/>
+  <g class="p">
+    <text x="205" y="55">A0</text><line x1="240" y1="50" x2="300" y2="50" class="l"/><text x="205" y="77">A1</text><line x1="240" y1="72" x2="300" y2="72" class="l"/>
+    <text x="205" y="99">A2</text><line x1="240" y1="94" x2="300" y2="94" class="l"/><text x="205" y="121">A3</text><line x1="240" y1="116" x2="300" y2="116" class="l"/>
+    <text x="205" y="143">A4</text><line x1="240" y1="138" x2="300" y2="138" class="l"/><text x="205" y="165">A5</text><line x1="240" y1="160" x2="300" y2="160" class="l"/>
+    <text x="205" y="187">A6</text><line x1="240" y1="182" x2="300" y2="182" class="l"/><text x="205" y="209">A7</text><line x1="240" y1="204" x2="300" y2="204" class="l"/>
+    <text x="205" y="231">A8</text><line x1="240" y1="226" x2="300" y2="226" class="l"/><text x="205" y="253">A9</text><line x1="240" y1="248" x2="300" y2="248" class="l"/>
+    <text x="195" y="275">A10</text><line x1="240" y1="270" x2="300" y2="270" class="l"/><text x="195" y="297">A11</text><line x1="240" y1="292" x2="300" y2="292" class="l"/>
+    <text x="195" y="319">A12</text><line x1="240" y1="314" x2="300" y2="314" class="l"/>
+    <text x="175" y="370">/RAS</text><line x1="240" y1="365" x2="300" y2="365" class="l"/><text x="175" y="405">/CAS</text><line x1="240" y1="400" x2="300" y2="400" class="l"/>
+    <text x="155" y="465">Banco 0</text><line x1="240" y1="460" x2="300" y2="460" class="l"/><text x="155" y="492">Banco 1</text><line x1="240" y1="487" x2="300" y2="487" class="l"/>
+    <text x="155" y="519">Banco 2</text><line x1="240" y1="514" x2="300" y2="514" class="l"/><text x="155" y="546">Banco 3</text><line x1="240" y1="541" x2="300" y2="541" class="l"/>
+    <text x="155" y="573">Banco 4</text><line x1="240" y1="568" x2="300" y2="568" class="l"/>
+  </g>
+  <text x="420" y="170" class="c">Sistema de memoria</text><text x="420" y="205" class="c">32 Gbits</text>
+  <text x="420" y="255" class="s">32 bancos</text><text x="420" y="287" class="s">1 chip 64 M x 16</text><text x="420" y="313" class="s">por banco</text><text x="420" y="355" class="s">32 chips no total</text>
+  <line x1="540" y1="180" x2="625" y2="180" class="b"/><text x="645" y="186" class="p">D0</text><line x1="540" y1="215" x2="625" y2="215" class="b"/><text x="645" y="221" class="p">D1</text>
+  <text x="580" y="255" class="p">...</text><line x1="540" y1="295" x2="625" y2="295" class="b"/><text x="645" y="301" class="p">D14</text><line x1="540" y1="330" x2="625" y2="330" class="b"/><text x="645" y="336" class="p">D15</text>
+  <line x1="360" y1="675" x2="360" y2="625" class="l"/><text x="360" y="702" text-anchor="middle" class="p">/CS</text><line x1="420" y1="675" x2="420" y2="625" class="l"/><text x="420" y="702" text-anchor="middle" class="p">/WE</text><line x1="480" y1="675" x2="480" y2="625" class="l"/><text x="480" y="702" text-anchor="middle" class="p">/OE</text>
 </svg>
 
